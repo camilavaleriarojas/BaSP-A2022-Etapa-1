@@ -4,63 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Trackgenix</title>
 </head>
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Trackgenix</a></li>
-				<li><a href="#">About Trackgenix</a></li>
-				<li><a href="#">Functions</a></li>
-				<li><a href="#">Info</a></li>
-				<li><a href="#">History</a></li>
-				<li><a href="#">Products & Services</a></li>
-			</ul>
+		<nav class="nav-bar">
+			<div>
+        <ul class="ul-nav">
+          <li><a href="#">Trackgenix</a></li>
+          <li class="space-nav"><a href="#">About Trackgenix</a></li>
+          <li><a href="#">Functions</a></li>
+          <li><a href="#">Info</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Products & Services</a></li>
+        </ul>
+      </div>
 		</nav>
 	</header>
 	<aside>
-		<section>
-			<input type="search">
+		<section class="section-aside">
+			<input type="search" placeholder="Search">
 			<p>Menú</p>
 			<ul>
 				<li>
-					<img src="assets/home.png" alt="home">
+          <i class="fa-solid fa-house img-icon"></i>
 					<a href="#" >Home</a>
 				</li>
 				<li >
-					<img src="assets/add-user.png" alt="signup">
+					<i class="fa-solid fa-user-plus img-icon"></i>
 					<a href="#">Sign up</a>
 				</li>
 				<li>
-					<img src="assets/user-interface.png" alt="login">
+					<i class="fa-solid fa-right-to-bracket img-icon"></i>
 					<a href="#">Login</a>
 				</li>
 				<li>
-					<img src="assets/email.png" alt="contact">
+					<i class="fa-regular fa-envelope img-icon"></i>
 					<a href="#">Contact</a>
 				</li>
 			</ul>
 		</section>
-		<section>  
-			<div>
+		<section class="section-info-aside">  
+			<div class="margin-div-aside">
 				<p>Get in Touch</p>
 			</div>
 			<div>
-				<img src="assets/email.png" alt="email">
+				<!-- <img src="assets/email.png" alt="email"> -->
 				<p>info@gigatech.com</p>
 			</div> 
 			<div> 
-				<img src="assets/telephone.png" alt="telephone">
+				<!-- <img src="assets/telephone.png" alt="telephone"> -->
 				<p>(+000) 000-000000</p>
 			</div>
 			<div>
-				<img src="assets/pin.png" alt="pin">
-				<p>1234 Somewhere Road Somewhere, XX 000-0000</p>
+				<!-- <img src="assets/pin.png" alt="pin"> -->
+				<p class="margin-p-aside">
+          1234 Somewhere Road 
+          Somewhere, XX 000-0000
+        </p>
 			</div>
 		</section>
 	</aside>
+  <!--
 	<main>
 		<section>
 			<div> 
@@ -338,5 +348,6 @@
 			<p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
 		</div>
 	</footer>
+  -->
 </body>
 </html>
