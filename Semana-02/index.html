@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Trackgenix</title>
 </head>
@@ -29,7 +30,7 @@
 	<aside>
 		<section class="section-aside">
 			<input type="search" placeholder="Search">
-			<p>Menú</p>
+			<p class="section-aside-p">Menú</p>
 			<ul>
 				<li>
           <i class="fa-solid fa-house img-icon"></i>
@@ -49,150 +50,183 @@
 				</li>
 			</ul>
 		</section>
-		<section class="section-info-aside">  
-			<div class="margin-div-aside">
-				<p>Get in Touch</p>
-			</div>
-			<div>
-				<!-- <img src="assets/email.png" alt="email"> -->
-				<p>info@gigatech.com</p>
-			</div> 
-			<div> 
-				<!-- <img src="assets/telephone.png" alt="telephone"> -->
-				<p>(+000) 000-000000</p>
-			</div>
-			<div>
-				<!-- <img src="assets/pin.png" alt="pin"> -->
-				<p class="margin-p-aside">
-          1234 Somewhere Road 
-          Somewhere, XX 000-0000
-        </p>
-			</div>
-		</section>
+    <section class="section-aside">
+			<ul>
+				<li>
+					<p class="section-aside-second-p">Get in Touch</p>
+				</li>
+				<li >
+					<p><i class="fa-regular fa-envelope img-icon"></i>info@gigatech.com</p>
+				</li>
+				<li>
+					<p><i class="fa-solid fa-phone img-icon"></i>(+000) 000-000000</p>
+				</li>
+				<li>
+					<p> 
+            <i class="fa-solid fa-location-dot img-icon"></i>
+            1234 Somewhere Road 
+            Somewhere, XX 000-0000
+          </p>
+				</li>
+			</ul>
 	</aside>
-  <!--
 	<main>
-		<section>
-			<div> 
-				<section>
-					<h1>Trackgenix</h1>
-					<p>
-						Make it easy to record hours worked on each project
-						and work team at GigaTech Software Solutions SA.
-					</p>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and 
-						typesetting industry. Lorem Ipsum has been the industry's
-						standard dummy text ever since the 1500s, 
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					</p>
-					<a href="#">LEARN MORE</a>
-				</section>
+		<div class="section-index">
+			<div class="div-index"> 
+        <h1>Trackgenix</h1>
+        <p class="first-p-index">
+          Make it easy to record hours worked on each project
+          and work team at GigaTech Software Solutions SA.
+        </p>
+        <p class="second-p-index">
+          Lorem Ipsum is simply dummy text of the printing and 
+          typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s.
+        </p>
+        <a href="#" class="a-index">LEARN MORE</a>
 			</div>
-			<div>
-				<img src="assets/img-index.png" width="700px" alt="trackgenix-index">
+			<div class="div-img-index">
+				<img src="assets/img-index.png"  width="500px" alt="trackgenix-index" class="img-index">
 			</div>
-		</section> 
-		<section>
-			<div> 
-					<h2>About Trackgenix</h2>
-			</div>
-			<article>
-				<img src="assets/idea.png" alt="idea">
-				<h3>Productivity booster</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>
-			</article>
-			<article>
-				<img src="assets/profit-report.png" alt="profit-reports">
-				<h3>Work traceability</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>
-			</article>
-			<article>
-				<img src="assets/user.png" alt="user">
-				<h3>Leadership and team management</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>      
-			</article>
-			<article>
-				<img src="assets/like.png" alt="like">
-				<h3>Decision making</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>
-			</article>
+		</div> 
+    <section class="section-about-functions">
+      <div> 
+          <h2>About Trackgenix</h2>
+      </div>
+      <div class="margin-sections">
+        <article class="articles">
+          <div>
+            <img src="assets/idea.png" alt="idea" class="img-sections">
+          </div>
+          <div>
+            <h3>Productivity booster</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+          </div>
+        </article>
+        <article class="articles">
+          <div>
+            <img src="assets/profit-report.png" alt="profit-reports" class="img-sections">
+          </div>
+          <div>
+            <h3>Work traceability</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+          </div>
+        </article>
+        <article class="articles">
+          <div>
+            <img src="assets/user.png" alt="user" class="img-sections">
+          </div>
+          <div>
+            <h3>Leadership and team management</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>      
+          </div>
+        </article>
+        <article class="articles">
+          <div>
+            <img src="assets/like.png" alt="like" class="img-sections">
+          </div>
+          <div>
+            <h3>Decision making</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+          </div>
+        </article> 
+      </div>
 		</section>
-		<section>
+		<section class="section-about-functions">
 			<div> 
 				<h2>Functions</h2>
 			</div>
-			<article>
-				<img src="assets/clock.png" alt="clock">
-				<h3>Record of hours</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>
-			</article>
-			<article>
-				<img src="assets/profit-report.png" alt="profit-report">
-				<h3>Reports</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>      
-			</article>
-			<article>
-				<img src="assets/gear.png" alt="gear">
-				<h3>Resource management</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>    
-			</article>
-			<article>
-				<img src="assets/roles.png" alt="roles">
-				<h3>Multiple roles</h3>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-				</p>       
-			</article>
+      <div class="margin-sections">
+        <article class="articles">
+          <div>
+            <img src="assets/clock.png" alt="clock" class="img-sections">
+          </div>
+          <div>
+            <h3>Record of hours</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+          </div>
+        </article>
+        <article class="articles">
+          <div>
+            <img src="assets/profit-report.png" alt="profit-report" class="img-sections">
+          </div>
+          <div>
+            <h3>Reports</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>      
+          </div>
+        </article>
+        <article class="articles">
+          <div>
+            <img src="assets/gear.png" alt="gear" class="img-sections">
+          </div>
+          <div>
+            <h3>Resource management</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>    
+          </div>
+        </article>
+        <article class="articles">
+          <div>
+            <img src="assets/roles.png" alt="roles" class="img-sections">
+          </div>
+          <div>
+            <h3>Multiple roles</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>       
+          </div>
+        </article>
+      </div>
 		</section>
-		<div>
+		<div class="information">
 			<h2>Information</h2>
-			<form action="">
-				<div>
-					<label>Name</label>
-					<input type="text" placeholder="text your name">
-				</div>
-				<div>
-					<label>Email</label>
-					<input type="email" placeholder="text your email">
-				</div>
-				<div>
-					<label>Contact area</label>
-					<select name="area">
-						<option value="human-resources">Human Resources</option>
-						<option value="systems">Systems</option>
-						<option value="commercialization">Commercialization</option>
-					</select>
-				</div>
-				<div>
-					<label>Message</label>
-					<textarea name="message" cols="30" rows="10"></textarea>
-				</div>
-				<input type="submit" name="submit" value="Submit">
-			</form>
+      <form class="form">
+        <div>
+          <label>Name</label>
+          <input type="text" placeholder="text your name">
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" placeholder="text your email">
+        </div>
+        <div>
+          <label>Contact area</label>
+          <select name="area">
+            <option value="human-resources">Human Resources</option>
+            <option value="systems">Systems</option>
+            <option value="commercialization">Commercialization</option>
+          </select>
+        </div>
+        <div>
+          <label>Message</label>
+          <textarea name="message" cols="30" rows="10"></textarea>
+        </div>
+        <button>Submit</button>
+      </form>
 		</div>
+
+
 		<section>
 			<div>
 				<h2>Our history</h2>
@@ -325,7 +359,9 @@
 				</ol>
 			</div>
 		</section>
+    -->
 	</main> 
+  <!--
 	<footer>
 		<div>
 			<ul>
