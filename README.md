@@ -9,6 +9,10 @@ Trackgenix is ​​a company that facilitates the tracking of hours worked by e
 
 ### Week 01
 
-Landing page from Trackgenix created with HTML.
+Trackgenix's landing page created with HTML based on Figma design.
+
+### Week 02
+
+Basic CSS applied to landing page previously recreated with HTML.
 
 _By Camila Rojas_
