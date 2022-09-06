@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -10,50 +14,46 @@ i {
   margin-right: 8px
 }
 
-header {
-  position: fixed;
-  height: 70px;
-  padding: 0;
-  z-index: 1;
-}
-
-.header {
-  position: absolute;
-}
-
 aside {
   background-color: #D9D9D9;
   width: 291px;
   height: 982px;
   position: fixed;
-  z-index: 0;
-  margin-top: 110px;
+  top: 105px;
+  bottom: 0;
 
 }
 
 main {
-  margin-left: 300px;
-  position: absolute;
   z-index: 0;
-  top: 13%;
+  margin: 7% 0 0 20%;
+  min-height: 100%;
 }
 
 /* navbar */ 
 
 .nav-bar {
+  position: fixed;
   background-color: #D9D9D9;
   height: 106px;
-  width: 1512px;
+  width: 100%;
   border-bottom: 3px solid #373867;
   font-weight: bold;
+  z-index: 1;
+  width: 100%;
+  left: 1px;
+  top: 0px;
+  }
+
+.nav-bar div {
+  display: inline;
+  margin-left: 25px;
+  margin-top: 48px;
 }
 
 .nav-bar ul {
-  padding: 0;
-  margin: 0;
-  margin-left: 120px;
-  padding-top: 51px;
   float: right;
+  padding-top: 51px;
 }
 
 .nav-bar li {
@@ -69,6 +69,12 @@ main {
 
 .space-nav {
   margin-left: 624px;
+}
+
+.fa-bars {
+  margin-right: 94px;
+  margin-left: 25px;
+  margin-top: 48px;
 }
 
 /* aside */
@@ -109,7 +115,6 @@ main {
 }
 
 /* main content 1 */
-
 
 .primary-section {
   height: 900px;
@@ -162,28 +167,27 @@ main {
   margin-left: 132px;
   width: 410px;
   text-align: start;
+  padding: 20px 10px;
 }
 
 /* section about and functions */ 
 
 .img-sections {
-  width: 130px;
+  width: 100px;
+  margin-right: 58px;
+  float: left;
 }
 
 .section-about-functions {
-  height: 900px;
+  height: 850px;
   width: 100%;
   display: inline-block;
 }
 
-.section-about-functions img {
-  float: left;
-  margin-right: 20px;
-}
-
 .section-about-functions h2 {
   font-size: 40px;
-  margin-bottom: 168px;
+  margin-top: 110px;
+  margin-bottom: 99px;
   margin-left: 106px;
   font-weight: bold;
 }
@@ -191,11 +195,17 @@ main {
 .section-about-functions h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .section-about-functions p {
   font-size: 15px;
   margin-top: 17px;
+  margin-right: 72px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 517px;
+  height: 84px;
 }
 
 .section-about-functions article {
@@ -208,13 +218,15 @@ main {
   margin-left: 50px;
 }
 
+/*information*/
+
 .information {
-  height: 900px;
+  height: 850px;
 }
 
 .information h2 {
   font-size: 40px;
-  margin-top: 104px;
+  padding-top: 104px;
   margin-bottom: 17px;
   margin-left: 204px;
   font-weight: 700;
@@ -231,16 +243,25 @@ main {
 }
 
 .form label {
-  display: block;
   font-weight: 400;
+  display: block;
 }
 
-.form input {
+.form input[type="text"], .form input[type="email"] {
   width: 260px;
   height: 37px;
   margin-top: 7px;
   border-radius: 4px;
   border: 1px solid #373867;
+}
+
+.input-radio {
+  margin-top: 10px;
+  accent-color: #373867;
+}
+
+.contact-area input, .contact-area p {
+  display: inline-block;
 }
 
 .form textarea {
@@ -258,14 +279,10 @@ main {
   border-radius: 5px;
 }
 
-
-
 /* history */
 
-
 #history {
-  height: 900px;
-  padding: 20px;
+  height: 850px;
 }
 
 #history div {
@@ -275,12 +292,15 @@ main {
 
 #history h2 {
   font-size: 40px;
+  font-weight: 700;
+  margin-top: 88px;
   margin-bottom: 17px;
   margin-left: 100px;
 }
 
 #history h3 {
-  font-size: 30px;
+  font-size: 24px;
+  font-weight: 500;
   margin-bottom: 119px;
   margin-left: 100px;
 }
@@ -288,6 +308,7 @@ main {
 #history div:first-of-type {
   float: left;
 }
+
 
 .first-div-history p {
   width: 383px;
@@ -309,7 +330,7 @@ main {
 /* products business support*/
 
 .products-services {
-  height: 900px;
+  height: 850px;
 }
 
 .products-services h2{
@@ -317,7 +338,8 @@ main {
   font-size: 40px;
   line-height: 47px;
   color: #373867;
-  margin-left: 397px;
+  margin-top: 109px;
+  margin-left: 106px;
   margin-bottom: 81px ;
 }
 
@@ -326,11 +348,15 @@ main {
   font-size: 15px;
   line-height: 24px;
   width: 410px;
-  margin-left: 397px;
+  height: 214px;
+  margin-left: 106px;
+  text-align: initial;
 }
 
+/*products-business-support*/
+
 .products-business-support {
-  height: 900px;
+  height: 850px;
 }
 
 .products-business-support h2 {
@@ -343,6 +369,7 @@ main {
   text-align: center;
   padding-top: 10px;
   margin-left: 132px;
+  margin-top: 138px;
 }
 
 .products-business-support p {
@@ -367,8 +394,10 @@ main {
 }
 
 .div-ol li {
-  text-align: center;
   margin-bottom: 56px;
+  text-align: initial;
+  margin-left: 30px;
+  list-style-type: decimal;
 }
 
 .div-ol a {
@@ -379,5 +408,32 @@ main {
   color: #383767;
 }
 
+/* footer */
 
+footer {
+  height: 106px;
+  background-color: #D9D9D9;
+  text-align: center;
+  bottom: 0;
+}
+
+footer div {
+  padding-top: 25px;
+}
+
+footer li {
+  display: inline;
+}
+
+footer a {
+  font-size: 31px;
+  margin-right: 20px;
+  color: #C4C4C4;
+}
+
+footer p {
+  margin-top: 15px;
+  font-weight: 500;
+  line-height: 16px;
+}
 
