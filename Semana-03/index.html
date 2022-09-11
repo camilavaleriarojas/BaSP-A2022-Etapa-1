@@ -18,17 +18,15 @@
 </head>
 <body>
 	<header>
-		<nav>
-      <i class="fa-solid fa-bars"></i>
-      <a href="#">Trackgenix</a>
-      <ul>
-        <li><a href="#">About Trackgenix</a></li>
-        <li><a href="#">Functions</a></li>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Products & Services</a></li>
-      </ul>
-  </nav>
+    <p><i class="fa-solid fa-bars index-icon"></i></p>
+    <a href="#">Trackgenix</a>
+    <ul>
+      <li><a href="#">About Trackgenix</a></li>
+      <li><a href="#">Functions</a></li>
+      <li><a href="#">Info</a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Products & Services</a></li>
+    </ul>
 	</header>
 	<aside>
 		<div>
@@ -36,19 +34,19 @@
 			<p>Menú</p>
 			<ul>
 				<li>
-          <i class="fa-solid fa-house img-icon"></i>
+          <i class="fa-solid fa-house"></i>
 					<a href="#" >Home</a>
 				</li>
 				<li >
-					<i class="fa-solid fa-user-plus img-icon"></i>
+					<i class="fa-solid fa-user-plus"></i>
 					<a href="#">Sign up</a>
 				</li>
 				<li>
-					<i class="fa-solid fa-right-to-bracket img-icon"></i>
+					<i class="fa-solid fa-right-to-bracket"></i>
 					<a href="#">Login</a>
 				</li>
 				<li>
-					<i class="fa-regular fa-envelope img-icon"></i>
+					<i class="fa-regular fa-envelope"></i>
 					<a href="#">Contact</a>
 				</li>
 			</ul>
@@ -59,13 +57,13 @@
 					Get in Touch
 				</li>
 				<li>
-					<i class="fa-regular fa-envelope img-icon"></i>info@gigatech.com
+					<i class="fa-regular fa-envelope"></i>info@gigatech.com
 				</li>
 				<li>
-					<i class="fa-solid fa-phone img-icon"></i>(+000) 000-000000
+					<i class="fa-solid fa-phone"></i>(+000) 000-000000
 				</li>
 				<li> 
-          <i class="fa-solid fa-location-dot img-icon"></i>
+          <i class="fa-solid fa-location-dot"></i>
           1234 Somewhere Road 
           Somewhere, XX 000-0000
 				</li>
@@ -73,7 +71,7 @@
     </div>
 	</aside>
 	<main>
-		<section>
+		<section id="primary-section">
       <article>
         <h1>Trackgenix</h1>
         <p>
@@ -89,10 +87,10 @@
         <a href="#">LEARN MORE</a>
       </article>
 			<div>
-				<img src="assets/img-index.png" width="700px" alt="trackgenix-index">
+				<img src="assets/img-index.png" alt="trackgenix-index">
 			</div>
 		</section> 
-		<section>
+		<section class="about">
 			<h2>About Trackgenix</h2>
 			<article>
 				<img src="assets/idea.png" alt="idea">
@@ -127,7 +125,7 @@
 				</p>
 			</article>
 		</section>
-		<section> 
+		<section class="functions"> 
 				<h2>Functions</h2>
 			<article>
 				<img src="assets/clock.png" alt="clock">
@@ -192,7 +190,7 @@
         <button>Submit</button>
       </form>
 		</section>
-		<section>
+		<section class="history">
 			<article>
 				<h2>Our history</h2>
 				<h3>GigaTech Software Solutions SA</h3>
@@ -220,7 +218,7 @@
 				</p>
 			</article>
 		</section>
-		<section>
+		<section class="products-services">
       <h2>Products & Services</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and 
@@ -232,15 +230,20 @@
         standard dummy text ever since the 1500s.
       </p>
 		</section>
-		<section>
-			<article>
+		<section class="products">
+			<div>
 				<h2>Products</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				<p>
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-				</p>
-			</article>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+				<p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+			</div>
 			<div>
 				<ol>
 					<li>
@@ -258,14 +261,19 @@
 				</ol>
 			</div>
 		</section>
-		<section>
+		<section class="business">
 			<div>
 				<h2>Business</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				<p>
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-				</p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+				<p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
 			</div>
 			<div>
 				<ol>
@@ -284,14 +292,19 @@
 				</ol>
 			</div>
 		</section>
-		<section>
+		<section class="support">
 			<div>
 				<h2>Support</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				<p>
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-				</p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+				<p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
 			</div>
 			<div>
 				<ol>
@@ -309,7 +322,7 @@
 			</div>
 		</section>
 	</main> 
-	<footer>
+	<footer class="footer">
     <ul>
       <li>
         <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
