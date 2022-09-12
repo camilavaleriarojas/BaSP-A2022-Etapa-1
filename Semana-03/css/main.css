@@ -1,31 +1,53 @@
+main {
+  margin-top: 90px;
+}
+
 #primary-section {
+  width: 90%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
   align-items: center;
 }
 
 #primary-section div {
-  order: -1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 600px;
+  justify-content: center;
   margin-top: 54px;
-} 
-
-#primary-section article {
-  margin-left: 10px;
+  margin-bottom: 100px;
 }
 
+#primary-section img {
+  margin-top: 30px;
+  width: 300px;
+  flex-grow: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
 #primary-section h1 {
+  font-weight: 700;
   font-size: 20px;
 }
 
 #primary-section p:nth-of-type(1) {
+  font-weight: 400;
   font-size: 20px;
-  font-weight: 450;
+  line-height: 23px;
 }
 
 #primary-section p:nth-of-type(2) {
-  margin-top: 24px;
-  margin-bottom: 40px;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -33,28 +55,38 @@
 
 #primary-section a {
   padding: 10px 24px;
-  margin-top: 20px;
-  gap: 10px;
   border: 1px solid #373867;
+  align-self: flex-start;
 }
 
-#primary-section img {
-  width: 400px;
-}
 
-.about, .functions {
+/* about and functions*/
+
+
+.container {
   display: flex;
-  flex-direction: column;
-  margin: 30px; 
+  justify-content: center;
+  padding: 5px;
+  flex-wrap: wrap;
 }
 
-.about article, .functions article {
-  margin-top: 20px;
-  margin-bottom: 50px;
+.container article {
+  display: flex;
+  margin: 20px;
+  width: 90%;
 }
 
 .about img, .functions img {
   display: none;
+  width: 100px;
+  height: 100px;
+  margin-right: 60px;
+  align-self: center;
+}
+
+.about h2, .functions h2 {
+  margin-bottom: 39px;
+  width: 300px;
 }
 
 .about h3, .functions h3 {
@@ -62,38 +94,128 @@
   margin-bottom: 10px;
 }
 
-.history { 
-  margin: 30px;
-  font-size: 24px;
-  font-weight: 500;
+
+/*information*/
+
+
+.information h2 {
+  margin-bottom: 40px;
 }
 
-.history p {
-  margin: 22px 0 20px 0;
-  font-style: normal;
+.information form {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-information div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.box-information:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.box-information label{
+  margin-bottom: 10px;
+  line-height: 16px;
+}
+
+.box-information div {
+  margin-bottom: 22px;
+}
+
+input {
+  flex-basis: 50px;
+  border: 1px solid #373867;
+  border-radius: 4px;
+}
+
+.contact-area div {
+  margin-bottom: 20px;
+  margin-left: 70px;
+}
+
+.contact-area p {
+  margin-bottom: 20px;
+}
+
+.box-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-message label {
+  margin-bottom: 20px;
+}
+
+.information button {
+  align-self: flex-end;
+  margin-top: 20px;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  padding: 10px 24px;
+}
+
+
+/*history*/
+
+
+.history h3 {
+  margin: 9px 0 22px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.history article:nth-of-type(1) p:nth-of-type(1) {
+  margin-right: 30px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 }
 
-.products-services {
-  margin: 50px;
-  line-height: 24px;
+.history p {
+  margin: 22px 0 20px 0;
+  font-size: 12px;
+  line-height: 18px;
 }
 
+
+/* products and services */
+
+
 .products-services h2 {
-  padding-top: 50px;
+  margin: 0 74px 49px 30px;
+  margin-bottom: 49px;
+  line-height: 24px;
+  width: 295px;
 }
 
 .products-services p {
+  margin-left: 25px;
+  margin-right: 25px;
   font-size: 15px;
   line-height: 24px;
+
 }
+
+
+/* products, business, support*/
+
 
 .products, .business, .support {
   display: flex;
   flex-direction: column;
-  height: 600px;
-  margin: 55px; 
+  margin: 0 55px 80px 55px; 
+}
+
+.products h2, .business h2, .support h2 {
+  margin-left: 67px;
+  margin-bottom: 46px;
 }
 
 .products, .business, .support p {
@@ -114,3 +236,39 @@
 }
 
 
+/* media */
+
+
+@media (min-width: 768px) {
+  .about img, .functions img {
+    display: unset;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin: 130px 0 0 300px;
+  }
+
+  #primary-section h1 {
+    font-size: 40px;
+  }
+
+  #primary-section p:nth-of-type(2) {
+    background-color: #D9D9D9;
+    padding: 20px 10px;
+  }
+
+  .container article, .container article {
+    width: 43%;
+  }
+
+  .about img, .functions img {
+    display: uset;
+    width: 100px;
+    height: 100px;
+    margin-right: 60px;
+  }
+
+}

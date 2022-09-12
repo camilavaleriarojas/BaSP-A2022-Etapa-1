@@ -8,8 +8,14 @@ body {
   font-size: 15px;
 }
 
-h1, h2 {
+h1 {
   font-size: 40px;
+  font-weight: bold;
+  line-height: 47px;
+}
+
+h2 {
+  font-size: 30px;
   font-weight: bold;
   line-height: 47px;
 }
@@ -37,6 +43,6 @@ i {
 }
 
 section {
-  margin: 0 6% 70% 6%;
+  margin-bottom: 100px;
 }
 

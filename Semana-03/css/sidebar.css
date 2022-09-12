@@ -1,3 +1,41 @@
-aside {
+.aside {
   display: none;
+  position: fixed;
+  flex-direction: column;
+  width: 300px;
+  top: 90px;
+  height: 100%;
+  padding: 19px;
+  background-color: #D9D9D9;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  z-index: -1;
+}
+
+.aside-links input {
+  margin-top: 10px;
+  width: 260px;
+  height: 37px;
+}
+
+.aside-links li, .aside-contact li {
+  margin-top: 29px;
+  margin-left: 29px;
+}
+
+.aside-links p {
+  margin: 57px 33px 0 33px ;
+  border-bottom: 3px solid #373867;
+}
+
+.aside-contact li:nth-of-type(1) {
+  margin: 207px 33px 0 33px ;
+  border-bottom: 3px solid #373867;
+}
+
+@media (min-width: 1024px) {
+  .aside {
+    display: flex;
+  }
 }
