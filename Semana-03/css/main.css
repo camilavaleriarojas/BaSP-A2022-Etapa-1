@@ -2,6 +2,12 @@ main {
   margin-top: 90px;
 }
 
+h2 {
+  margin-left: 6%;
+}
+
+/* NO ANDA */
+/*
 #primary-section {
   width: 90%;
   margin: auto;
@@ -23,34 +29,54 @@ main {
 #primary-section img {
   margin-top: 30px;
   width: 300px;
+  max-width: 600px;
   flex-grow: 0.5;
+} 
+*/
+
+
+#primary-section {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
 }
 
+#primary-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 54px;
+}
 
-
-
-
-
-
-
-
-
+#primary-section img {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  flex-grow: 0.5;
+}
 
 #primary-section h1 {
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 30px;
 }
 
 #primary-section p:nth-of-type(1) {
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+  margin-bottom: 20px;
 }
 
 #primary-section p:nth-of-type(2) {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  margin-bottom: 20px;
 }
 
 #primary-section a {
@@ -58,10 +84,19 @@ main {
   border: 1px solid #373867;
   align-self: flex-start;
 }
-
+ 
 
 /* about and functions*/
 
+
+.about h2 {
+  margin-left: 6%;
+  margin-top: 15%;
+} 
+
+.functions h2 {
+  margin-left: 6%;
+}
 
 .container {
   display: flex;
@@ -105,6 +140,11 @@ main {
 .information form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.box-information {
+  min-width: 350px;
 }
 
 .box-information div {
@@ -134,6 +174,10 @@ input {
   border-radius: 4px;
 }
 
+.contact-area {
+  min-width: 350px;
+}
+
 .contact-area div {
   margin-bottom: 20px;
   margin-left: 70px;
@@ -146,6 +190,7 @@ input {
 .box-message {
   display: flex;
   flex-direction: column;
+  min-width: 350px;
 }
 
 .box-message label {
@@ -153,7 +198,7 @@ input {
 }
 
 .information button {
-  align-self: flex-end;
+  margin-left: 260px;
   margin-top: 20px;
   border: 1px solid #373867;
   border-radius: 5px;
@@ -164,22 +209,32 @@ input {
 /*history*/
 
 
+.history {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .history h3 {
-  margin: 9px 0 22px 0;
+  margin-left: 6%;
+  margin-right: 6%;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
 }
 
 .history article:nth-of-type(1) p:nth-of-type(1) {
-  margin-right: 30px;
+  margin-left: 6%;
+  margin-right: 6%;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 }
 
 .history p {
-  margin: 22px 0 20px 0;
+  margin-left: 6%;
+  margin-right: 6%;
+  padding: 27px 0 20px 0;
   font-size: 12px;
   line-height: 18px;
 }
@@ -189,7 +244,7 @@ input {
 
 
 .products-services h2 {
-  margin: 0 74px 49px 30px;
+  margin-bottom: 49px;
   margin-bottom: 49px;
   line-height: 24px;
   width: 295px;
@@ -207,10 +262,14 @@ input {
 /* products, business, support*/
 
 
+.container-box {
+  display: flex;
+  flex-direction: column;
+}
+
 .products, .business, .support {
   display: flex;
   flex-direction: column;
-  margin: 0 55px 80px 55px; 
 }
 
 .products h2, .business h2, .support h2 {
@@ -243,7 +302,6 @@ input {
   .about img, .functions img {
     display: unset;
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -253,6 +311,18 @@ input {
 
   #primary-section h1 {
     font-size: 40px;
+  }
+
+  #primary-section {
+   flex-direction: row;
+  }
+
+  #primary-section div {
+    width: 47%;
+   }
+
+  #primary-section img {
+    width: 47%;
   }
 
   #primary-section p:nth-of-type(2) {
@@ -271,4 +341,28 @@ input {
     margin-right: 60px;
   }
 
+  .history article {
+    width: 50%;
+    font-size: 16px;
+  }
+
+  .history h3 {
+    font-size: 24px;
+  }
+
+  .history p {
+    font-size: 16px;
+  }
+
+  .history article:nth-of-type(1) p:nth-of-type(1) {
+    font-size: 20px;
+  }
+
+  .container-box {
+    flex-direction: row;
+  }
+
+  .products p:nth-of-type(1), .business p:nth-of-type(1), .support p:nth-of-type(1) {
+    display: none;
+  }
 }
