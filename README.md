@@ -7,6 +7,7 @@ Trackgenix is ​​a company that facilitates the tracking of hours worked by e
 ```
 1- access to the folder "Semana-01"
 2- open the file "index.html" on your browser
+3- open Git pages
 ```
 
 ### Week 01
@@ -20,5 +21,7 @@ Basic CSS applied to landing page previously recreated with HTML.
 ### Week 03
 
 Landing page stylesheets updated using Flexbox and Media Queries to make it responsive.
+
+Link to Git Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-03/ 
 
 _By Camila Rojas_
