@@ -24,4 +24,10 @@ Landing page stylesheets updated using Flexbox and Media Queries to make it resp
 
 Link to Git Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-03/ 
 
+### Week 04
+
+Exercises Javascript added to folder Semana-04
+
+Link to Git Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-04/ 
+
 _By Camila Rojas_
