@@ -9,7 +9,7 @@ console.log('\n-Exercise 4.a');
 var numRandom = Math.random();
 
 if (numRandom >= 0.5) {
-  alert('“Greater than 0,5');
+  alert('Greater than 0,5');
 }else {
   alert('Lower than 0,5');
 }
