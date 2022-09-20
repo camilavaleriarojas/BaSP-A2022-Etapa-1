@@ -7,8 +7,8 @@
   background-color: #D9D9D9;
 }
 
-.footer ul li {
-  display: inline-block;
+.footer ul {
+  display: flex;
 }
 
 .footer li a {

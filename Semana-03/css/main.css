@@ -3,9 +3,9 @@ main {
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 20px;
   margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 h2 {
@@ -18,12 +18,12 @@ p {
 }
 
 #primary-section {
-  width: 90%;
-  margin: auto;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
   align-items: center;
+  width: 90%;
+  margin: auto;
 }
 
 #primary-section div {
@@ -36,27 +36,27 @@ p {
 }
 
 #primary-section img {
-  margin-top: 30px;
+  flex-grow: 0.5;
   width: 100%;
   max-width: 600px;
-  flex-grow: 0.5;
+  margin-top: 30px;
 }
 
 #primary-section p:nth-of-type(1) {
+  margin-bottom: 20px;
   font-size: 20px;
   line-height: 23px;
-  margin-bottom: 20px;
 }
 
 #primary-section p:nth-of-type(2) {
-  line-height: 24px;
   margin-bottom: 20px;
+  line-height: 24px;
 }
 
 #primary-section a {
+  align-self: flex-start;
   padding: 10px 24px;
   border: 1px solid #373867;
-  align-self: flex-start;
 }
  
 .about h2 {
@@ -66,22 +66,22 @@ p {
 .box-about, .box-functions {
   display: flex;
   justify-content: center;
-  padding: 5px;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .box-about article, .box-functions article {
   display: flex;
-  margin: 20px;
   width: 90%;
+  margin: 20px;
 }
 
 .about img, .functions img {
   display: none;
+  align-self: center;
   width: 100px;
   height: 100px;
   margin-right: 60px;
-  align-self: center;
 }
 
 .about h2, .functions h2 {
@@ -163,9 +163,9 @@ input {
 }
 
 .information button {
+  padding: 10px 24px;
   margin-left: 260px;
   margin-top: 20px;
-  padding: 10px 24px;
   border: 1px solid #373867;
   border-radius: 5px;
 }
@@ -246,7 +246,7 @@ input {
 
 @media screen and (min-width: 768px) {
   .about img, .functions img {
-    display: unset;
+    display: flex;
   }
 }
 
@@ -269,7 +269,7 @@ input {
   }
 
   #primary-section, .box-services {
-   flex-direction: row;
+    flex-direction: row;
   }
 
   #primary-section div, #primary-section img {
@@ -281,8 +281,8 @@ input {
   }
 
   #primary-section p:nth-of-type(2) {
-    background-color: #D9D9D9;
     padding: 20px 10px;
+    background-color: #D9D9D9;
   }
 
   #primary-section a {
@@ -298,7 +298,7 @@ input {
   }
 
   .about img, .functions img {
-    display: uset;
+    display: flex;
     width: 100px;
     height: 100px;
     margin-right: 60px;

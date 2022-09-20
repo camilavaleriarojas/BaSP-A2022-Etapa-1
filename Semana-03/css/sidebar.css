@@ -1,6 +1,6 @@
 .aside {
-  display: none;
   position: fixed;
+  display: none;
   flex-direction: column;
   width: 300px;
   height: 100%;
@@ -13,9 +13,9 @@
 }
 
 .aside-links input {
-  margin-top: 10px;
   width: 260px;
   height: 37px;
+  margin-top: 10px;
 }
 
 .aside-links li, .aside-contact li {
