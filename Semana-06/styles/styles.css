@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #373867;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 47px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 47px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+a {
+  color: #373867;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #373867;
+}
+
+i {
+  margin-right: 8px
+}
+
+.about img, .functions img {
+  width: 120px;
+}
+
+section {
+  margin-bottom: 100px;
+  padding: 2%;
+}
+
