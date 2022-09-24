@@ -31,4 +31,8 @@ Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Se
 
 Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
+### Week 06
+
+Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+
 _By Camila Rojas_
