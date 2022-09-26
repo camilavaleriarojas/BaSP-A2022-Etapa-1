@@ -33,6 +33,6 @@ Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Se
 
 ### Week 06
 
-Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
 
 _By Camila Rojas_
