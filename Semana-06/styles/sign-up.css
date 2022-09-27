@@ -19,7 +19,8 @@ h3 {
 
 h4 {
   margin-top: 50px;
-  font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -47,6 +48,7 @@ form input, form label, form a, button {
 
 form input {
   height: 35px;
+  border: 1px solid #373867;
   border-radius: 5px;
 }
 
@@ -97,7 +99,6 @@ form label {
 
 .box-3 div {
   width: 100%;
-  margin-bottom: 2%;
 }
 
 .box-3 div:nth-of-type(2), .box-3 div:nth-of-type(13) {
@@ -105,19 +106,52 @@ form label {
 }
 
 .box-4 button{
+  align-self: center;
   height: 35px;
-  margin-top: 5%; 
+  width: 50%; 
   margin-bottom: 20px;
+  border: none;
   border-radius: 5px;
   color: white;
   background-color: #373867;
+}
+
+.border-none {
+  border: none;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.correct {
+  border: 1px solid green;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+::placeholder {
+  color: #373867;
+  font-style: italic;
+}
+
+#name-span, #last-name-span, #dni-span, #phone-span, #date-span, #address-span, 
+#location-span, #postal-span, #email-span, #password-span, #repeat-password-span {
+  visibility: hidden;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 1024px) {
 
   main {
     margin-left: 300px;
-    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   form {
@@ -148,7 +182,6 @@ form label {
 
   .box-3 div {
     width: 45%;
-    margin-bottom: 2%;
   }
 
 }

@@ -50,6 +50,7 @@ form input, form label, form a, button {
 
 form input {
   height: 60px;
+  border: 1px solid #373867;
   border-radius: 5px;
 }
 
@@ -131,7 +132,7 @@ form label {
 
 .box-3 button:nth-of-type(2) {
   color: #373867;
-  border-color: #373867;
+  border: 1px solid #373867;
 }
 
 .border-none {
@@ -154,6 +155,7 @@ form label {
   color: #373867;
   font-style: italic;
 }
+
 #email-message, #password-message {
   visibility: hidden;
   margin-top: 10px;
