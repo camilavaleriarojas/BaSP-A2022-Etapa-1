@@ -3,8 +3,10 @@ window.onload = function() {
   var email = document.getElementById('email');
   var password = document.getElementById('password');
   var button = document.getElementById('login');
-  var passwordExpression = /^([a-zA-Z0-9]+)$/ 
+ 
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/; 
+  var numeric = '0123456789'
+  var alphaExpression = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
   
   function isValidEmail() {
     return emailExpression.test(email.value);
@@ -19,17 +21,25 @@ window.onload = function() {
     if(isValidEmail()) {
       email.classList.remove('border', 'error','border-none');
       email.classList.add('correct');   
-      document.getElementById('password-message').style.visibility = 'hidden';
+      document.getElementById('email-message').style.visibility = 'hidden';
     }
     else {
       email.classList.remove('border', 'correct','border-none');
       email.classList.add('error');
-      document.getElementById('password-message').style.visibility = 'visible';
+      document.getElementById('email-message').style.visibility = 'visible';
     }
   }
   
-  function isValidPassword() {
-    return passwordExpression.test(password.value);
+  function isValidPassword() {        
+    for (var i = 0; i < password.value.length; i++) {
+      if(!alphaExpression.includes(password.value[i])) {
+        return false;
+      }
+    }
+    if(password.value.length < 3) {
+      return false;
+    }
+    return true;
   }
 
   password.onfocus = function() {

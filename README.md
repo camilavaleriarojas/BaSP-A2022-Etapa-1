@@ -33,6 +33,11 @@ Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Se
 
 ### Week 06
 
-Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
+- Login and Sign Up pages created with HTML and CSS.
+- Logic added to Login and Sign Up forms using Javascript.
+
+Link to Index GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
+Link to Login Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/login.html
+Link to Sign-up Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/sign-up.html
 
 _By Camila Rojas_
