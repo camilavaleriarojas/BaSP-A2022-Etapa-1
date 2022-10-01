@@ -1,0 +1,187 @@
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #373867;
+}
+
+h2, h3, p {
+  margin-top: 10px;
+  color: white;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+form input, form label, form a, button {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+form input {
+  height: 35px;
+  border: 1px solid #373867;
+  border-radius: 5px;
+}
+
+form label {
+  margin-bottom: 10px;
+  color: #373867;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.box-1 {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 300px;
+  width: 40%;
+  margin-left: 10%;
+}
+
+.box-1 p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 10px;
+  margin-top: 30%;
+  margin-bottom: 100px
+}
+
+.box-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+  flex-wrap: wrap;
+}
+
+.box-3 div {
+  width: 100%;
+}
+
+.box-3 div:nth-of-type(1), .box-3 div:nth-of-type(2), .box-3 div:nth-of-type(13) {
+  width: 100%;
+}
+
+.box-3 div:nth-of-type(1) {
+  text-align: center;
+}
+
+.box-4 button{
+  align-self: center;
+  height: 40px;
+  width: 50%; 
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #373867;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.correct {
+  border: 1px solid green;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+::placeholder {
+  color: #373867;
+  font-style: italic;
+}
+
+#name-span, #last-name-span, #dni-span, #phone-span, #date-span, #address-span, 
+#location-span, #postal-span, #email-span, #password-span, #repeat-password-span {
+  visibility: hidden;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+
+  main {
+    margin-left: 300px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  form {
+    justify-content: space-evenly;
+  }
+
+  form input, form label, form a, button {
+    font-size: 15px;
+  }
+  
+  form input {
+    height: 35px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .box-1 {
+    display: flex;
+  }
+
+  .box-2 {
+    width: 60%;
+    margin-bottom: 0;
+    margin-top: 5%;
+  }
+
+  .box-3 div {
+    width: 45%;
+  }
+
+}
