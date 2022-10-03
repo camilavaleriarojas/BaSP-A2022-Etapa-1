@@ -3,9 +3,7 @@ window.onload = function() {
   var email = document.getElementById('email');
   var password = document.getElementById('password');
   var button = document.getElementById('login');
- 
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/; 
-  var numeric = '0123456789'
   var alphaExpression = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789';
   
   function isValidEmail() {
@@ -60,33 +58,13 @@ window.onload = function() {
     }
   }   
 
-
-
-  /*
-
   button.addEventListener('click', function(e) {
     e.preventDefault();
-    if(isValidEmail() && isValidPassword()) {
-      alert('Email: ' + email.value + '\n Password: ' + password.value);
-    }
-    else if(!isValidEmail() && isValidPassword()) {
-      alert('Email is not valid!');
-    }
-    else if(isValidEmail() && !isValidPassword()) {
-      alert('Password is not valid!');
-    }
-    else {
-      alert('Email and Password not valid!');
-    } 
-  })
 
+    queryParams = 'login?email='+email.value+'&password='+password.value;
+    paramsAlert = 'Email: ' + email.value + '\n' +'Password: ' + password.value;
 
-  */
-
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/'+
-    'login?email='+email.value+'&password='+password.value;
+    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/' + queryParams; 
     
     fetch(url)
       .then(function(response){
@@ -95,11 +73,14 @@ window.onload = function() {
       .then(function(data) {
         if(data.success == true) {
           var dataString = JSON.stringify(data.msg) 
-          alert(dataString + '\n' + 'Email: ' + email.value + '\n' +'Password: ' + password.value)
+          alert(dataString + '\n' + paramsAlert)
         }
         else {
-          var errorMessage = JSON.stringify(data.errors[0].msg);
-          alert(errorMessage + '\n' + 'Email: ' + email.value + '\n' +'Password: ' + password.value);
+          var errorMessage = []
+          for(var j=0; j<data.errors.length; j++) {
+            errorMessage.push(data.errors[j].msg);
+          }
+          alert(errorMessage.join('\n') + '\n' + paramsAlert);
         }
         })
         .catch(function(error) {

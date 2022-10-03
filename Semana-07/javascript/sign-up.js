@@ -350,64 +350,54 @@ window.onload = function() {
     }
   } 
 
-  button.onclick = function (e) {
+
+  button.addEventListener('click', function(e) {
     e.preventDefault();
-    var errorAlert = '';
-    var error = false;
-    if (!isValidName ()) {
-      errorAlert += 'Invalid Name\n';
-      error = true;
-    }
-    if (!isValidLastName ()) {
-      errorAlert += 'Invalid Last Name\n';
-      error = true;
-    }
-    if (!isValidDni ()) {
-      errorAlert += 'Invalid DNI\n';
-      error = true;
-    }
-    if (!isValidDate ()) {
-      errorAlert += 'Invalid Date of Birth\n';
-      error = true;
-    }
-    if (!isValidAddress()) {
-      errorAlert += 'Invalid Address\n';
-      error = true;
-    }
-    if (!isValidPhone()) {
-      errorAlert += 'Invalid Phone\n';
-      error = true;
-    }
-    if (!isValidLocation()) {
-      errorAlert += 'Invalid Location\n';
-      error = true;
-    }
-    if (!isValidPostal()) {
-      errorAlert += 'Invalid Postal Code\n';
-      error = true;
-    }
-    if (!isValidEmail()) {
-      errorAlert += 'Invalid Email\n';
-      error = true;
-    }
-    if (!isValidPassword()) {
-      errorAlert += 'Invalid Password\n';
-      error = true;
-    } 
-    if (!isValidRepeatPassword()) { 
-      errorAlert += 'Invalid Repeat Password\n';
-      error = true;
-    } 
-    if (error) {
-      alert(errorAlert);
-      return false;
-    } else {
-      alert('Name: ' + name.value + '\nLastname: ' + lastName.value +
-        '\nDNI: ' + dni.value + 'nBirth Date: ' + (date.value) +
-        '\nAddress: ' + address.value + '\nPhone: ' + phone.value +
-        '\nLocation: ' + location.value + '\nPostal Code: ' + postalCode.value +
-        '\nEmail: ' + email.value + '\nPassword: ' + password.value + '\nRepeat Password: ' + repeatPassword.value);
-      return true;
-    }
-  }
+
+    var dobValue = date.value;
+    var yyyy = date.value.substring(0,4);
+    var mm = date.value.substring(5,7);
+    var dd = date.value.substring(8,10); 
+    dobValue = mm + '/' + dd + '/' + yyyy;
+  
+    var queryParams = '?name=' + name.value + '&lastName=' + lastName.value + '&dni=' + dni.value + '&dob='
+    + dobValue + '&phone=' + phone.value + '&address=' + address.value + '&city=' + location.value + '&zip='
+    + postalCode.value + '&email=' + email.value + '&password=' + password.value;
+  
+    var paramsAlert = 'Name: ' + name.value + '\n' + 'Last Name: ' + lastName.value + '\n' + 'DNI: ' + dni.value +
+     '\n' + 'Date of Birth: ' + dobValue + '\n' + 'Phone: ' + phone.value + '\n'+'Address: ' + address.value + 
+     '\n' + 'Location: ' + location.value + '\n' + 'Postal Code: ' + postalCode.value + '\n' + 'Email: ' + email.value +
+     '\n' + 'Password: ' + password.value;
+
+    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + queryParams;
+
+    fetch(url)
+      .then(function(response) {
+        return(response.json());
+      })
+      .then(function(data) {
+        if(data.success == true) {
+          var dataString = JSON.stringify(data.msg)  
+          alert(dataString + '\n' + paramsAlert);
+        }
+        else {
+          var errorMessage = []
+          for(var j=0; j<data.errors.length; j++) {
+            errorMessage.push(data.errors[j].msg);
+          }
+          alert(errorMessage.join('\n'));
+        }
+        })
+        .catch(function(error) {
+          alert('Error: ' + '\n' + error);
+        })           
+  })
+
+
+
+
+
+
+
+
 }
