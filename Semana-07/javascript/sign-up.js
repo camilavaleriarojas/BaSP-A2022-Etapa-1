@@ -446,8 +446,61 @@ window.onload = function() {
     password.value = localStorage.getItem('password');
   }
 
+
   button.addEventListener('click', function(e) {
     e.preventDefault();
+    
+    var errorAlert = [];
+    var error = false;
+
+    if (!isValidName ()) {
+      errorAlert.push('Invalid Name\n');
+      error = true;
+    }
+    if (!isValidLastName ()) {
+      errorAlert.push('Invalid Last Name\n');
+      error = true;
+    }
+    if (!isValidDni ()) {
+      errorAlert.push('Invalid DNI\n');
+      error = true;
+    }
+    if (!isValidDate ()) {
+      errorAlert.push('Invalid Date of Birth\n');
+      error = true;
+    }
+    if (!isValidAddress()) {
+      errorAlert.push('Invalid Address\n');
+      error = true;
+    }
+    if (!isValidPhone()) {
+      errorAlert.push('Invalid Phone\n');
+      error = true;
+    }
+    if (!isValidLocation()) {
+      errorAlert.push('Invalid Location\n');
+      error = true;
+    }
+    if (!isValidPostal()) {
+      errorAlert.push('Invalid Postal Code\n');
+      error = true;
+    }
+    if (!isValidEmail()) {
+      errorAlert.push('Invalid Email\n');
+      error = true;
+    }
+    if (!isValidPassword()) {
+      errorAlert.push('Invalid Password\n');
+      error = true;
+    } 
+    if (!isValidRepeatPassword()) { 
+      errorAlert.push('Invalid Repeat Password\n');
+      error = true;
+    } 
+    if (error) {
+      alert(errorAlert);
+      return false;
+    }
 
     var dobValue = date.value;
     var yyyy = date.value.substring(0,4);
@@ -464,20 +517,17 @@ window.onload = function() {
      '\n' + 'Location: ' + location.value + '\n' + 'Postal Code: ' + postalCode.value + '\n' + 'Email: ' + email.value +
      '\n' + 'Password: ' + password.value;
 
+    var resp;
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + queryParams;
 
-    fetch(url)
+    if (errorAlert.length === 0) {
+      fetch(url)
       .then(function(response) {
-        if (response.status < 200 || response.status > 299) {
-          throw new Error('Error')
-        }
+        resp = response
         return(response.json());
-      })/*
-      .then(function(response) {
-        return(response.json());
-      })*/
+      })
       .then(function(data) {
-        if(data.success == true) {
+        if (data.success == true) {
           localStorage.setItem('name',name.value);
           localStorage.setItem('last name',lastName.value);
           localStorage.setItem('dni',dni.value);
@@ -488,6 +538,47 @@ window.onload = function() {
           localStorage.setItem('zip',postalCode.value);
           localStorage.setItem('email',email.value);
           localStorage.setItem('password',password.value);
+          var dataString = JSON.stringify(data.msg)
+          alert(dataString + '\n' + paramsAlert);
+        }
+        else {
+          alert('Error: ' + data.msg + paramsAlert);
+          if (resp.status < 200 || resp.status > 299) {
+            throw new Error('Error' + data.msg)
+          }
+        }
+      })
+    }
+    
+  })
+
+}
+
+
+/*
+    if (errorAlert.length === 0) {
+      fetch(url)
+      // .then(function(response) {
+      //   if (response.status < 200 || response.status > 299) {
+      //     throw new Error('Error')
+      //   }
+      //   return(response.json());
+      // })
+      .then(function(response) {
+        return(response.json());
+      })
+      .then(function(data) {
+        if(data.success == true) {
+          // localStorage.setItem('name',name.value);
+          // localStorage.setItem('last name',lastName.value);
+          // localStorage.setItem('dni',dni.value);
+          // localStorage.setItem('date of birth',date.value);
+          // localStorage.setItem('phone',phone.value);
+          // localStorage.setItem('address',address.value);
+          // localStorage.setItem('location',location.value);
+          // localStorage.setItem('zip',postalCode.value);
+          // localStorage.setItem('email',email.value);
+          // localStorage.setItem('password',password.value);
 
           var dataString = JSON.stringify(data.msg)
           alert(dataString + '\n' + paramsAlert);
@@ -503,6 +594,4 @@ window.onload = function() {
         .catch(function(error) {
           alert('Error: ' + '\n' + error);
         })
-  })
-
-}
+    }*/
