@@ -39,5 +39,14 @@ Link to GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Se
 Link to Index GitHub Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
 Link to Login Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/login.html
 Link to Sign-up Pages: https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-06/views/sign-up.html
+ 
+
+### Week 07
+
+- Fetch Request was added to Sign-up and Login Javascript files.
+- Corrections from Week 06 applied.
+
+Link to Github Pages : https://camilavaleriarojas.github.io/BaSP-A2022-Etapa-1/Semana-07/views/
+
 
 _By Camila Rojas_

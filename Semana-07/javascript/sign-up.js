@@ -19,6 +19,17 @@ window.onload = function() {
   var alphaNumericSpaceExpression = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ';
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
+  function disableButton() {
+    if(isValidName() && isValidLastName() && isValidDni() && isValidDate()
+    && isValidPhone() && isValidAddress() && isValidLocation() && isValidPostal() 
+    && isValidEmail() && isValidPassword() && isValidRepeatPassword()) {
+      button.classList.remove('disable-btn');
+    }
+    else {
+      button.classList.add('disable-btn')
+    }
+  }
+
   function isValidName() {
     for (var i = 0; i < name.value.length; i++) {
       if (!alphaExpression.includes(name.value[i])) {
@@ -140,11 +151,13 @@ window.onload = function() {
 
   name.onblur = function() {
     if (isValidName()) {
+      disableButton()
       name.classList.remove('border', 'error');
       name.classList.add('correct');
       document.getElementById('name-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       name.classList.remove('border', 'correct');
       name.classList.add('error');
       document.getElementById('name-span').style.visibility = 'visible';
@@ -168,11 +181,13 @@ window.onload = function() {
 
   lastName.onblur = function() {
     if (isValidLastName()) {
+      disableButton()
       lastName.classList.remove('border', 'error');
       lastName.classList.add('correct');
       document.getElementById('last-name-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       lastName.classList.remove('border-none', 'correct');
       lastName.classList.add('error');
       document.getElementById('last-name-span').style.visibility = 'visible';
@@ -196,11 +211,13 @@ window.onload = function() {
 
   dni.onblur = function() {
     if (isValidDni()) {
+      disableButton()
       dni.classList.remove('border', 'error');
       dni.classList.add('correct');
       document.getElementById('dni-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       dni.classList.remove('border', 'correct');
       dni.classList.add('error');
       document.getElementById('dni-span').style.visibility = 'visible';
@@ -224,11 +241,13 @@ window.onload = function() {
 
   date.onblur = function() {
     if (isValidDate()) {
+      disableButton()
       date.classList.remove('border', 'error');
       date.classList.add('correct');
       document.getElementById('date-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       date.classList.remove('border', 'correct');
       date.classList.add('error');
       document.getElementById('date-span').style.visibility = 'visible';
@@ -251,11 +270,13 @@ window.onload = function() {
 
   phone.onblur = function() {
     if (isValidPhone()) {
+      disableButton()
       phone.classList.remove('border', 'error');
       phone.classList.add('correct');
       document.getElementById('phone-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       phone.classList.remove('border', 'correct');
       phone.classList.add('error');
       document.getElementById('phone-span').style.visibility = 'visible';
@@ -279,11 +300,13 @@ window.onload = function() {
 
   address.onblur = function() {
     if (isValidAddress()) {
+      disableButton()
       address.classList.remove('border', 'error');
       address.classList.add('correct');
       document.getElementById('address-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       address.classList.remove('border', 'correct');
       address.classList.add('error');
       document.getElementById('address-span').style.visibility = 'visible';
@@ -307,11 +330,13 @@ window.onload = function() {
 
   location.onblur = function() {
     if (isValidLocation()) {
+      disableButton()
       location.classList.remove('border', 'error');
       location.classList.add('correct');
       document.getElementById('location-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       location.classList.remove('border', 'correct');
       location.classList.add('error');
       document.getElementById('location-span').style.visibility = 'visible';
@@ -335,11 +360,13 @@ window.onload = function() {
 
   postalCode.onblur = function() {
     if (isValidPostal()) {
+      disableButton()
       postalCode.classList.remove('border', 'error');
       postalCode.classList.add('correct');
       document.getElementById('postal-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       postalCode.classList.remove('border', 'correct');
       postalCode.classList.add('error');
       document.getElementById('postal-span').style.visibility = 'visible';
@@ -363,11 +390,13 @@ window.onload = function() {
 
   email.onblur = function() {
     if (isValidEmail()) {
+      disableButton()
       email.classList.remove('border', 'error');
       email.classList.add('correct');
       document.getElementById('email-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       email.classList.remove('border', 'correct');
       email.classList.add('error');
       document.getElementById('email-span').style.visibility = 'visible';
@@ -385,11 +414,13 @@ window.onload = function() {
 
   password.onblur = function() {
     if (isValidPassword()) {
+      disableButton()
       password.classList.remove('border', 'error');
       password.classList.add('correct');
       document.getElementById('password-span').style.visibility = 'hidden';
     }
     else {
+      disableButton()
       password.classList.remove('border-none', 'correct');
       password.classList.add('error');
       document.getElementById('password-span').style.visibility = 'visible';
@@ -413,12 +444,14 @@ window.onload = function() {
 
   repeatPassword.onblur = function() {
     if (isValidRepeatPassword()) {
+      disableButton()
       if (repeatPassword.value === password.value) {
         repeatPassword.classList.remove('border', 'error');
         repeatPassword.classList.add('correct');
       }
     }
     else {
+      disableButton()
       repeatPassword.classList.remove('border-none', 'correct');
       repeatPassword.classList.add('error');
       document.getElementById('repeat-password-span').style.visibility = 'visible';
@@ -446,62 +479,9 @@ window.onload = function() {
     password.value = localStorage.getItem('password');
   }
 
-
   button.addEventListener('click', function(e) {
     e.preventDefault();
     
-    var errorAlert = [];
-    var error = false;
-
-    if (!isValidName ()) {
-      errorAlert.push('Invalid Name\n');
-      error = true;
-    }
-    if (!isValidLastName ()) {
-      errorAlert.push('Invalid Last Name\n');
-      error = true;
-    }
-    if (!isValidDni ()) {
-      errorAlert.push('Invalid DNI\n');
-      error = true;
-    }
-    if (!isValidDate ()) {
-      errorAlert.push('Invalid Date of Birth\n');
-      error = true;
-    }
-    if (!isValidAddress()) {
-      errorAlert.push('Invalid Address\n');
-      error = true;
-    }
-    if (!isValidPhone()) {
-      errorAlert.push('Invalid Phone\n');
-      error = true;
-    }
-    if (!isValidLocation()) {
-      errorAlert.push('Invalid Location\n');
-      error = true;
-    }
-    if (!isValidPostal()) {
-      errorAlert.push('Invalid Postal Code\n');
-      error = true;
-    }
-    if (!isValidEmail()) {
-      errorAlert.push('Invalid Email\n');
-      error = true;
-    }
-    if (!isValidPassword()) {
-      errorAlert.push('Invalid Password\n');
-      error = true;
-    } 
-    if (!isValidRepeatPassword()) { 
-      errorAlert.push('Invalid Repeat Password\n');
-      error = true;
-    } 
-    if (error) {
-      alert(errorAlert);
-      return false;
-    }
-
     var dobValue = date.value;
     var yyyy = date.value.substring(0,4);
     var mm = date.value.substring(5,7);
@@ -520,78 +500,33 @@ window.onload = function() {
     var resp;
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + queryParams;
 
-    if (errorAlert.length === 0) {
-      fetch(url)
-      .then(function(response) {
-        resp = response
-        return(response.json());
-      })
-      .then(function(data) {
-        if (data.success == true) {
-          localStorage.setItem('name',name.value);
-          localStorage.setItem('last name',lastName.value);
-          localStorage.setItem('dni',dni.value);
-          localStorage.setItem('date of birth',date.value);
-          localStorage.setItem('phone',phone.value);
-          localStorage.setItem('address',address.value);
-          localStorage.setItem('location',location.value);
-          localStorage.setItem('zip',postalCode.value);
-          localStorage.setItem('email',email.value);
-          localStorage.setItem('password',password.value);
-          var dataString = JSON.stringify(data.msg)
-          alert(dataString + '\n' + paramsAlert);
+    fetch(url)
+    .then(function(response) {
+      resp = response
+      return(response.json());
+    })
+    .then(function(data) {
+      if (data.success == true) {
+        localStorage.setItem('name',name.value);
+        localStorage.setItem('last name',lastName.value);
+        localStorage.setItem('dni',dni.value);
+        localStorage.setItem('date of birth',date.value);
+        localStorage.setItem('phone',phone.value);
+        localStorage.setItem('address',address.value);
+        localStorage.setItem('location',location.value);
+        localStorage.setItem('zip',postalCode.value);
+        localStorage.setItem('email',email.value);
+        localStorage.setItem('password',password.value);
+        var dataString = JSON.stringify(data.msg)
+        alert(dataString + '\n' + paramsAlert);
+      }
+      else {
+        alert('Error: ' + data.msg + paramsAlert);
+        if (resp.status < 200 || resp.status > 299) {
+          throw new Error('Error' + data.msg)
         }
-        else {
-          alert('Error: ' + data.msg + paramsAlert);
-          if (resp.status < 200 || resp.status > 299) {
-            throw new Error('Error' + data.msg)
-          }
-        }
-      })
-    }
-    
+      }
+    })
   })
-
 }
 
-
-/*
-    if (errorAlert.length === 0) {
-      fetch(url)
-      // .then(function(response) {
-      //   if (response.status < 200 || response.status > 299) {
-      //     throw new Error('Error')
-      //   }
-      //   return(response.json());
-      // })
-      .then(function(response) {
-        return(response.json());
-      })
-      .then(function(data) {
-        if(data.success == true) {
-          // localStorage.setItem('name',name.value);
-          // localStorage.setItem('last name',lastName.value);
-          // localStorage.setItem('dni',dni.value);
-          // localStorage.setItem('date of birth',date.value);
-          // localStorage.setItem('phone',phone.value);
-          // localStorage.setItem('address',address.value);
-          // localStorage.setItem('location',location.value);
-          // localStorage.setItem('zip',postalCode.value);
-          // localStorage.setItem('email',email.value);
-          // localStorage.setItem('password',password.value);
-
-          var dataString = JSON.stringify(data.msg)
-          alert(dataString + '\n' + paramsAlert);
-        }
-        else {
-          var errorMessage = []
-          for (var j=0; j<data.errors.length; j++) {
-            errorMessage.push(data.errors[j].msg);
-          }
-          alert(errorMessage.join('\n'));
-        }
-        })
-        .catch(function(error) {
-          alert('Error: ' + '\n' + error);
-        })
-    }*/

@@ -132,6 +132,11 @@ form label {
   border: 1px solid red;
 }
 
+.disable-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 ::placeholder {
   color: #373867;
   font-style: italic;
